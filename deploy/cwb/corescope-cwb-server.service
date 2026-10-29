@@ -1,0 +1,26 @@
+[Unit]
+Description=CoreScopeCWB server
+After=corescope-cwb-ingestor.service
+Wants=corescope-cwb-ingestor.service
+
+[Service]
+Type=simple
+User=corescope-cwb
+Group=corescope-cwb
+WorkingDirectory=/opt/corescope-cwb
+Environment=GOMEMLIMIT=192MiB
+Environment=GOMAXPROCS=2
+Environment=DB_PATH=/var/lib/corescope-cwb/meshcore.db
+Environment=CORESCOPE_INGESTOR_STATS=/run/corescope-cwb/ingestor-stats.json
+ExecStart=/opt/corescope-cwb/bin/corescope-server --config-dir /etc/corescope-cwb --public /opt/corescope-cwb/public
+Slice=corescope-cwb.slice
+MemoryAccounting=true
+MemoryHigh=256M
+MemoryMax=320M
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

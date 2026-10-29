@@ -1,0 +1,81 @@
+{
+  "port": 8089,
+  "branding": {
+    "siteName": "CoreScopeCWB",
+    "tagline": "MeshCore · CWB"
+  },
+  "mqttSources": [
+    {
+      "name": "CWB-local",
+      "broker": "mqtt://localhost:1883",
+      "username": "CONFIGURE_LOCALLY",
+      "password": "CONFIGURE_LOCALLY",
+      "topics": [
+        "meshcore/CWB/#"
+      ],
+      "iataFilter": [
+        "CWB"
+      ]
+    }
+  ],
+  "observerIATAWhitelist": [
+    "CWB"
+  ],
+  "defaultRegion": "CWB",
+  "regions": {
+    "CWB": "Curitiba e região"
+  },
+  "mapDefaults": {
+    "center": [
+      -25.43,
+      -49.27
+    ],
+    "zoom": 10
+  },
+  "packetStore": {
+    "maxMemoryMB": 64,
+    "estimatedPacketBytes": 450,
+    "retentionHours": 6,
+    "hotStartupHours": 1
+  },
+  "runtime": {
+    "maxMemoryMB": 128
+  },
+  "ingestBufferSize": 1024,
+  "retention": {
+    "packetDays": 1,
+    "nodeDays": 30,
+    "observerDays": 7,
+    "hopIndexDays": 0
+  },
+  "db": {
+    "vacuumOnStartup": false,
+    "incrementalVacuumPages": 128,
+    "load": {
+      "chunkSize": 500
+    }
+  },
+  "timestamps": {
+    "timezone": "Etc/GMT+3",
+    "defaultMode": "absolute",
+    "formatPreset": "iso"
+  },
+  "userManagement": {
+    "enabled": false
+  },
+  "clientRxCoverage": {
+    "enabled": false
+  },
+  "clientRxObservations": {
+    "enabled": false
+  },
+  "clientRfSamples": {
+    "enabled": false
+  },
+  "clientRegions": {
+    "enabled": false
+  },
+  "clientNodeNames": {
+    "enabled": false
+  }
+}

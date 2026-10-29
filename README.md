@@ -301,3 +301,9 @@ Contributions welcome. Please read [AGENTS.md](AGENTS.md) for coding conventions
 ## License
 
 GPL-3.0-or-later
+
+## CoreScopeCWB · perfil nativo para Tinker2
+
+Este fork mantém o upstream e adiciona um [perfil de implantação CWB](deploy/cwb/README.md)
+com broker local, memória limitada e unidades systemd. O perfil é preparatório;
+confira seus limites e as etapas de instalação antes de executar.

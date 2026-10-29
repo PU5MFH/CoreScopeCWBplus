@@ -1,0 +1,31 @@
+[Unit]
+Description=CoreScopeCWB ingestor
+After=network-online.target meshcoresdr-mqtt-broker.service
+Wants=network-online.target meshcoresdr-mqtt-broker.service
+
+[Service]
+Type=simple
+User=corescope-cwb
+Group=corescope-cwb
+WorkingDirectory=/opt/corescope-cwb
+StateDirectory=corescope-cwb
+StateDirectoryMode=0750
+RuntimeDirectory=corescope-cwb
+RuntimeDirectoryMode=0750
+RuntimeDirectoryPreserve=restart
+Environment=GOMEMLIMIT=96MiB
+Environment=GOMAXPROCS=2
+Environment=DB_PATH=/var/lib/corescope-cwb/meshcore.db
+Environment=CORESCOPE_INGESTOR_STATS=/run/corescope-cwb/ingestor-stats.json
+ExecStart=/opt/corescope-cwb/bin/corescope-ingestor --config /etc/corescope-cwb/config.json
+Slice=corescope-cwb.slice
+MemoryAccounting=true
+MemoryHigh=128M
+MemoryMax=192M
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

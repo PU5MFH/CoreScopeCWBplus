@@ -1,0 +1,7 @@
+[Unit]
+Description=CoreScopeCWB shared memory budget
+
+[Slice]
+MemoryAccounting=true
+MemoryHigh=384M
+MemoryMax=512M
