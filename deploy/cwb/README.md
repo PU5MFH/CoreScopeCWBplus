@@ -4,8 +4,9 @@ Fork de Kpa-clawbot/CoreScope. Base examinada: ddce76a. Objetivo: executar
 nativamente os binários Go server e ingestor, servindo os arquivos public/,
 consumindo somente CWB de um broker MQTT local já existente.
 
-Este commit prepara configuração e units. **Não compila, instala nem inicia o
-CoreScope no equipamento.** Não altera a lógica Go ou a interface upstream.
+O perfil prepara configuração e units. A compilação nativa e um teste temporário
+foram concluídos: veja [BUILD-VALIDATION.md](BUILD-VALIDATION.md). **Nenhum serviço
+CoreScope permanente foi instalado ou ativado.** Não altera a lógica Go ou a interface upstream.
 Não houve validação em navegador de uma instância CoreScope nesta etapa.
 
 ## Memória
