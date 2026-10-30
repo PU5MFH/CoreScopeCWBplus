@@ -1,4 +1,4 @@
-# CoreScopeCWB — perfil inicial para Tinker2 / ARM64 / 2 GB
+# CoreScopeCWBplus — perfil inicial para Tinker2 / ARM64 / 2 GB
 
 Fork de Kpa-clawbot/CoreScope. Base examinada: ddce76a. Objetivo: executar
 nativamente os binários Go server e ingestor, servindo os arquivos public/,

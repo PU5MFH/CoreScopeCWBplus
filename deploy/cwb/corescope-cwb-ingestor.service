@@ -1,5 +1,5 @@
 [Unit]
-Description=CoreScopeCWB ingestor
+Description=CoreScopeCWBplus ingestor
 After=network-online.target meshcoresdr-mqtt-broker.service
 Wants=network-online.target meshcoresdr-mqtt-broker.service
 

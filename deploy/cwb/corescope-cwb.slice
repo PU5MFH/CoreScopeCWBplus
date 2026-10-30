@@ -1,5 +1,5 @@
 [Unit]
-Description=CoreScopeCWB shared memory budget
+Description=CoreScopeCWBplus shared memory budget
 
 [Slice]
 MemoryAccounting=true

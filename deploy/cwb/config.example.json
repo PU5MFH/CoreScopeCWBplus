@@ -1,7 +1,7 @@
 {
   "port": 8089,
   "branding": {
-    "siteName": "CoreScopeCWB",
+    "siteName": "CoreScopeCWBplus",
     "tagline": "MeshCore · CWB"
   },
   "mqttSources": [

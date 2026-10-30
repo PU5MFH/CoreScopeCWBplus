@@ -1,5 +1,5 @@
 [Unit]
-Description=CoreScopeCWB server
+Description=CoreScopeCWBplus server
 After=corescope-cwb-ingestor.service
 Wants=corescope-cwb-ingestor.service
 
